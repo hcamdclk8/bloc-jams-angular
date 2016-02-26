@@ -1,6 +1,16 @@
  (function() {
      function SongPlayer() {
+         
+ /**
+ * @desc 
+ * @type {Object}
+ */
          var SongPlayer = {};
+
+/**
+ * @desc current song playing
+ * @type {Object}
+ */
          
          var currentSong = null;
          
@@ -9,6 +19,16 @@
  * @type {Object}
  */
          var currentBuzzObject = null;
+         
+ /**
+ * @function playSong
+ * @desc Plays song and sets playing property to true
+ * @param {Object} song
+ */
+         var playSong = function (song) {
+             currentBuzzObject.play();
+             song.playing = true;
+         }
          
  /**
  * @function setSong
@@ -36,8 +56,7 @@
      
                 
          setSong(song);             
-         currentBuzzObject.play();  
-         song.playing = true;        
+         playSong(song);        
          }
     };
          
