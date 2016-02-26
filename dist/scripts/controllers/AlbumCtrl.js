@@ -1,9 +1,9 @@
  (function() {
      function AlbumCtrl(Fixtures) {
         
-         this.albumData = Fixtures.getAlbum;
+         this.albumData = Fixtures.getAlbum();
         
-     }
+     };
  
      angular
          .module('blocJams')

@@ -38,7 +38,7 @@
          
          Fixtures.getCollection = function(numberOfAlbums) {
          var albums = [];
-         for (i=0, i < numberOfAlbums.length, i++) {
+         for (i=0; i < numberOfAlbums.length; i++) {
              albums.push(albumPicasso);
          }     
              
