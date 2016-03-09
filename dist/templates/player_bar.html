@@ -10,7 +10,7 @@
                        ng-click="playerBar.songPlayer.play()">
                  </span>
                  <span class='ion-pause'
-                       ng-show="!playerBar.songPlayer.currentSong.playing"
+                       ng-show="playerBar.songPlayer.currentSong.playing"
                        ng-click="playerBar.songPlayer.pause()">
                  </span>
              </a>
@@ -25,8 +25,8 @@
              <div class="seek-control">
               <!--      Controls song position based on position of click (fast forward to specific point in song) -->
                  <seek-bar value="{{ playerBar.songPlayer.currentTime }}" max="{{ playerBar.songPlayer.currentSong.duration }}" on-change="playerBar.songPlayer.setCurrentTime(value)"></seek-bar>
-                 <div class="current-time">{{ playerBar.songPlayer.currentTime }}</div>
-                 <div class="total-time">{{ playerBar.songPlayer.currentSong.duration }}</div>
+                 <div class="current-time">{{ playerBar.songPlayer.currentTime | timecode }}</div>
+                 <div class="total-time">{{ playerBar.songPlayer.currentSong.duration | timecode }}</div>
              </div>
          </div>
          <div class="control-group volume">
